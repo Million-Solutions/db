@@ -28,6 +28,7 @@ define('MIN_CONTENT_TEMAS_LONGITUD',270);
 #Estructura
 
 require('core/models/class.Conexion.php');
+require('core/bin/function.salir.php');
 #require('core/bin/functions/Encrypt.php');
 #require('core/bin/functions/Users.php');
 #require('core/bin/functions/Categorias.php');

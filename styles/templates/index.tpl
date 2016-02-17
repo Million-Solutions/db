@@ -29,7 +29,8 @@
     <link rel="stylesheet" href="plugins/daterangepicker/daterangepicker-bs3.css">
     <!-- bootstrap wysihtml5 - text editor -->
     <link rel="stylesheet" href="plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
-
+    <link rel="stylesheet" href="styles/css/modal.css">
+    <script src="styles/js/status.js"></script>
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -37,7 +38,7 @@
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
-  <body class="hold-transition skin-blue sidebar-mini">
+  <body onload="principio()" class="hold-transition skin-blue sidebar-mini" >
     <div class="wrapper">
 
       <header class="main-header">
@@ -72,14 +73,20 @@
                       <small>Mienbro desde {$smarty.session.datein}</small>
                     </p>
                   </li>
+<!-- ventana modal de cambio de perfil -->
 
                   <!-- Menu Footer-->
                   <li class="user-footer">
                     <div class="pull-left">
-                      <a href="#" class="btn btn-default btn-flat">Perfil</a>
+                      <a href="#" onclick="cambioperfil()" class="btn btn-default btn-flat">Perfil</a>
                     </div>
                     <div class="pull-right">
-                      <a href="salir.php" class="btn btn-default btn-flat">Salir</a>
+                      <form action="salir.php" method="post">
+                      <input type="hidden" id="user" value="{$smarty.session.user}">
+                      <input type="hidden" id="id" value="{$smarty.session.id}">
+                      <input type="hidden" id="status" value="{$smarty.session.estado}">
+                      <input type="submit" class="btn btn-default btn-flat" value="Salir">
+                    </form>
                     </div>
                   </li>
                 </ul>
@@ -101,7 +108,7 @@
             </div>
             <div class="pull-left info">
               <p>{$smarty.session.user}</p>
-              <a href="#"><i class="fa fa-circle text-success"></i>{$smarty.session.status}</a>
+              <a href="#" id="estado" onclick="estado()"></a>
             </div>
           </div>
           <!-- search form
@@ -256,8 +263,19 @@
 
       <!-- Content Wrapper. Contains page content -->
       <div class="content-wrapper">
+
         <!-- Content Header (Page header) -->
         <section class="content-header">
+        <div id="cambioperfil"  class="modal" onclick="ocultarVentana()">
+          <div class="box box-success modal-contenido">
+                  <div class="box-header with-border">
+                    <h3 class="box-title">Cambio de Perfil</h3>
+                  </div><!-- /.box-header -->
+                  <div class="box-body">
+                    asd
+                  </div><!-- /.box-body -->
+                </div>
+              </div>
           <h1>
             Inicio
             <small>Panel Inicio</small>

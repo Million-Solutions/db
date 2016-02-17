@@ -5,7 +5,9 @@ if($_POST){
   include('core/models/class.Acceso.php');
   $acceso = new Acceso();
   $acceso->Login();
-
+    $entrar = new Salir();
+    $entrar->Entrar();
+    if($_SESSION['status'] == 1){ $_SESSION['status'] = 'Conectado'; }else{ $_SESSION['status'] = 'Desconetado'; }
   exit;
 }else {
 

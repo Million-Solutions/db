@@ -1,7 +1,7 @@
-<?php /* Smarty version 3.1.27, created on 2016-02-15 19:02:40
+<?php /* Smarty version 3.1.27, created on 2016-02-17 11:42:44
          compiled from "C:\xampp\htdocs\db\styles\templates\index.tpl" */ ?>
 <?php
-/*%%SmartyHeaderCode:1981856c26720869871_34445709%%*/
+/*%%SmartyHeaderCode:133856c4a304e668f3_47388116%%*/
 if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
@@ -9,20 +9,20 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'fdf85febb164c6ab6ab1465da2e27987e814690c' => 
     array (
       0 => 'C:\\xampp\\htdocs\\db\\styles\\templates\\index.tpl',
-      1 => 1455569101,
+      1 => 1455687399,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '1981856c26720869871_34445709',
+  'nocache_hash' => '133856c4a304e668f3_47388116',
   'has_nocache_code' => false,
   'version' => '3.1.27',
-  'unifunc' => 'content_56c26720daab64_38290986',
+  'unifunc' => 'content_56c4a30546f3f7_62539318',
 ),false);
 /*/%%SmartyHeaderCode%%*/
-if ($_valid && !is_callable('content_56c26720daab64_38290986')) {
-function content_56c26720daab64_38290986 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_56c4a30546f3f7_62539318')) {
+function content_56c4a30546f3f7_62539318 ($_smarty_tpl) {
 
-$_smarty_tpl->properties['nocache_hash'] = '1981856c26720869871_34445709';
+$_smarty_tpl->properties['nocache_hash'] = '133856c4a304e668f3_47388116';
 ?>
 <!DOCTYPE html>
 <html>
@@ -55,7 +55,10 @@ $_smarty_tpl->properties['nocache_hash'] = '1981856c26720869871_34445709';
     <link rel="stylesheet" href="plugins/daterangepicker/daterangepicker-bs3.css">
     <!-- bootstrap wysihtml5 - text editor -->
     <link rel="stylesheet" href="plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
-
+    <link rel="stylesheet" href="styles/css/modal.css">
+    <?php echo '<script'; ?>
+ src="styles/js/status.js"><?php echo '</script'; ?>
+>
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -67,7 +70,7 @@ $_smarty_tpl->properties['nocache_hash'] = '1981856c26720869871_34445709';
 >
     <![endif]-->
   </head>
-  <body class="hold-transition skin-blue sidebar-mini">
+  <body onload="principio()" class="hold-transition skin-blue sidebar-mini" >
     <div class="wrapper">
 
       <header class="main-header">
@@ -106,14 +109,23 @@ $_smarty_tpl->properties['nocache_hash'] = '1981856c26720869871_34445709';
 </small>
                     </p>
                   </li>
+<!-- ventana modal de cambio de perfil -->
 
                   <!-- Menu Footer-->
                   <li class="user-footer">
                     <div class="pull-left">
-                      <a href="#" class="btn btn-default btn-flat">Perfil</a>
+                      <a href="#" onclick="cambioperfil()" class="btn btn-default btn-flat">Perfil</a>
                     </div>
                     <div class="pull-right">
-                      <a href="salir.php" class="btn btn-default btn-flat">Salir</a>
+                      <form action="salir.php" method="post">
+                      <input type="hidden" id="user" value="<?php echo $_SESSION['user'];?>
+">
+                      <input type="hidden" id="id" value="<?php echo $_SESSION['id'];?>
+">
+                      <input type="hidden" id="status" value="<?php echo $_SESSION['estado'];?>
+">
+                      <input type="submit" class="btn btn-default btn-flat" value="Salir">
+                    </form>
                     </div>
                   </li>
                 </ul>
@@ -136,8 +148,7 @@ $_smarty_tpl->properties['nocache_hash'] = '1981856c26720869871_34445709';
             <div class="pull-left info">
               <p><?php echo $_SESSION['user'];?>
 </p>
-              <a href="#"><i class="fa fa-circle text-success"></i><?php echo $_SESSION['status'];?>
-</a>
+              <a href="#" id="estado" onclick="estado()"></a>
             </div>
           </div>
           <!-- search form
@@ -292,8 +303,19 @@ $_smarty_tpl->properties['nocache_hash'] = '1981856c26720869871_34445709';
 
       <!-- Content Wrapper. Contains page content -->
       <div class="content-wrapper">
+
         <!-- Content Header (Page header) -->
         <section class="content-header">
+        <div id="cambioperfil"  class="modal" onclick="ocultarVentana()">
+          <div class="box box-success modal-contenido">
+                  <div class="box-header with-border">
+                    <h3 class="box-title">Cambio de Perfil</h3>
+                  </div><!-- /.box-header -->
+                  <div class="box-body">
+                    asd
+                  </div><!-- /.box-body -->
+                </div>
+              </div>
           <h1>
             Inicio
             <small>Panel Inicio</small>

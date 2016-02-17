@@ -21,12 +21,13 @@ class Acceso{
 
                 $datos = $db->recorrer($sql);
                 $_SESSION['id'] = $datos['id'];
-                $_SESSION['user'] = $datos['user'];
+                $_SESSION['user'] = ucwords($datos['user']);
                 $_SESSION['email'] = $datos['email'];
                 $_SESSION['datein'] = $datos['datein'];
                 $_SESSION['rol'] = $datos['rol'];
                 $_SESSION['session'] = $_POST['session'];
-                if($datos['status'] == 1){ $_SESSION['status'] = 'Conectado'; }else{ $_SESSION['status'] = 'Desconetado'; }
+                $_SESSION['estado'] = $datos['status'];
+                $_SESSION['status'] = $datos['status'];
                                 if($_POST['session'] == true) {
                                   ini_set("session.use_cookies", 1);
                                   ini_set("session.use_only_cookies", 1);
@@ -34,6 +35,7 @@ class Acceso{
                                   ini_set('session.gc_maxlifetime', $duracion_sesion);
                                   session_cache_expire($duracion_sesion);
                                   session_set_cookie_params($duracion_sesion);}
+
           session_start();
               }else{
             throw new Exception(2);
