@@ -1,7 +1,7 @@
-<?php /* Smarty version 3.1.27, created on 2016-02-17 22:31:42
+<?php /* Smarty version 3.1.27, created on 2016-02-18 21:29:55
          compiled from "C:\xampp\htdocs\db\styles\templates\nav.tpl" */ ?>
 <?php
-/*%%SmartyHeaderCode:1788356c53b1e0ddde4_07880909%%*/
+/*%%SmartyHeaderCode:3190956c67e23531ba2_10956924%%*/
 if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
@@ -9,20 +9,20 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '67cba8931da08818a4365d301dfc0023c0939fcd' => 
     array (
       0 => 'C:\\xampp\\htdocs\\db\\styles\\templates\\nav.tpl',
-      1 => 1455766089,
+      1 => 1455848993,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '1788356c53b1e0ddde4_07880909',
+  'nocache_hash' => '3190956c67e23531ba2_10956924',
   'has_nocache_code' => false,
   'version' => '3.1.27',
-  'unifunc' => 'content_56c53b1e19b1b9_93082772',
+  'unifunc' => 'content_56c67e235d3925_24362522',
 ),false);
 /*/%%SmartyHeaderCode%%*/
-if ($_valid && !is_callable('content_56c53b1e19b1b9_93082772')) {
-function content_56c53b1e19b1b9_93082772 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_56c67e235d3925_24362522')) {
+function content_56c67e235d3925_24362522 ($_smarty_tpl) {
 
-$_smarty_tpl->properties['nocache_hash'] = '1788356c53b1e0ddde4_07880909';
+$_smarty_tpl->properties['nocache_hash'] = '3190956c67e23531ba2_10956924';
 ?>
 <div class="wrapper">
 
@@ -46,14 +46,16 @@ $_smarty_tpl->properties['nocache_hash'] = '1788356c53b1e0ddde4_07880909';
           <!-- User Account: style can be found in dropdown.less -->
           <li class="dropdown user user-menu">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-              <img src="dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
+              <img src="<?php echo $_SESSION['file'];?>
+" class="user-image" alt="User Image">
               <span class="hidden-xs"><?php echo $_SESSION['user'];?>
 </span>
             </a>
             <ul class="dropdown-menu">
               <!-- User image -->
               <li class="user-header">
-                <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+                <img src="<?php echo $_SESSION['file'];?>
+" class="img-circle" alt="User Image">
                 <p>
                   <?php echo $_SESSION['user'];?>
  - <?php echo $_SESSION['session'];?>
@@ -92,9 +94,10 @@ $_smarty_tpl->properties['nocache_hash'] = '1788356c53b1e0ddde4_07880909';
     <!-- sidebar: style can be found in sidebar.less -->
     <section class="sidebar">
       <!-- Sidebar user panel -->
-      <div class="user-panel">
-        <div class="pull-left image">
-          <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+      <div class="user-panel" >
+        <div class="pull-left image" >
+          <img src="<?php echo $_SESSION['file'];?>
+"  class="img-circle" alt="User Image">
         </div>
         <div class="pull-left info">
           <p><?php echo $_SESSION['user'];?>

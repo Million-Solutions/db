@@ -28,6 +28,7 @@ class Acceso{
                 $_SESSION['session'] = $_POST['session'];
                 $_SESSION['estado'] = $datos['status'];
                 $_SESSION['status'] = $datos['status'];
+                $_SESSION['file'] = $datos['file'];
                                 if($_POST['session'] == true) {
                                   ini_set("session.use_cookies", 1);
                                   ini_set("session.use_only_cookies", 1);

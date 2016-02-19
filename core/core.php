@@ -16,7 +16,7 @@ define('DB_NAME','prueba');
 define('HTML_DIR','html/');
 define('APP_TITLE','PRUEBA2.0');
 define('APP_COPY','Copyright &copy; ' . date('Y',time()) . ' X.x.');
-define('APP_URL','http://localhost/db1');
+define('APP_URL','http://localhost/db');
 #Constantes de PHPMailer
 define('PHPMAILER_HOST','p3plcpnl0173.prod.phx3.secureserver.net');
 define('PHPMAILER_USER','cristopherlizame@gmail.com');
@@ -29,6 +29,7 @@ define('MIN_CONTENT_TEMAS_LONGITUD',270);
 
 require('core/models/class.Conexion.php');
 require('core/bin/function.salir.php');
+  include('core/models/class.Acceso.php');
 #require('core/bin/functions/Encrypt.php');
 #require('core/bin/functions/Users.php');
 #require('core/bin/functions/Categorias.php');

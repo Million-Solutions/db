@@ -76,30 +76,3 @@ function ocultarVentana()
     ventana.style.display = "none";
     ventana.style.pointerEvents = "none";
 }
-function cambiarimagen(){
-  var xmlhttp;
-
-  var f=document.getElementById('image').value;
-  var j=document.getElementById('emailedit').value;
-  var g=document.getElementById('useredit').value;
-  var h=document.getElementById('id').value;
-
-  if (window.XMLHttpRequest)
-  {// code for IE7+, Firefox, Chrome, Opera, Safari
-  xmlhttp=new XMLHttpRequest();
-  }
-  else
-  {// code for IE6, IE5
-  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-  }
-  xmlhttp.onreadystatechange=function()
-  {
-  if (xmlhttp.readyState==4 && xmlhttp.status==200)
-  {
-  document.getElementById("estado").innerHTML=xmlhttp.responseText;
-  }
-  }
-  xmlhttp.open("POST","subirimg.php",true);
-  xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
-  xmlhttp.send("f="+f+"&g="+g+"&h="+h+"&j="+j);
-}

@@ -2,7 +2,6 @@
 
 if($_POST){
 
-  include('core/models/class.Acceso.php');
   $acceso = new Acceso();
   $acceso->Login();
     $entrar = new Salir();

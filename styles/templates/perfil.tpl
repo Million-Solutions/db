@@ -9,28 +9,30 @@
             <h3 class="box-title">Edita tu Perfil</h3>
           </div><!-- /.box-header -->
           <div class="box-body">
-            <form role="form">
+                        <div id="ajax"></div>
+            <form role="form" action="subirimg.php" method="post" enctype="multipart/form-data">
             <div class="form-group">
               <label  for="useredit">Nombre de Usuario:</label>
-              <input type="text" class="form-control" value="{$smarty.session.user}" id="useredit" disabled="">
+              <input type="text" class="form-control" value="{$smarty.session.user}" name="useredit" disabled="">
             </div>
-            <label  for="useredit">Archivo:</label>
-            <input name="file" type="file" id="image" onChange="ver(form.file.value)">
+            <label  for="file">Archivo:</label>
+            <input name="file" type="file"  >
             <div class="form-group">
               <label  for="emailedit">Email:</label>
-              <input type="email" class="form-control" id="emailedit" value="{$smarty.session.email}" >
+              <input type="email" class="form-control" name="emailedit" value="{$smarty.session.email}" >
             </div>
             <div class="form-group">
               <label  for="passedit">Password:</label>
-              <input type="password" class="form-control" id="passedit" value="" >
+              <input type="password" class="form-control" name="passedit" value="" >
             </div>
             <div class="form-group">
               <label  for="passedit">Permisos:</label>
-              <input type="text" class="form-control" id="roledit" disabled {if $smarty.session.rol == 1} value="Administrador"
+              <input type="text" class="form-control" name="roledit" disabled {if $smarty.session.rol == 1} value="Administrador"
               {elseif $smarty.session.rol == 2} value="Editor" {elseif $smarty.session.rol == 3} value="Invitado" {else} value="No tienes Permisos envia un ticket al Administador" {/if}>
             </div>
-            <button type="submit" onclick="cambiarimagen()" class="btn btn-default">Cambiar datos</button>
+            <button type="submit" class="btn btn-default">Cambiar datos</button>
             </form>
+
           </div><!-- /.box-body -->
         </div>
       </div>
