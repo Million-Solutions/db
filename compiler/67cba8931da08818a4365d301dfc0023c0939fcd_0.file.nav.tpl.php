@@ -1,7 +1,7 @@
-<?php /* Smarty version 3.1.27, created on 2016-02-18 21:29:55
+<?php /* Smarty version 3.1.27, created on 2016-02-19 14:40:28
          compiled from "C:\xampp\htdocs\db\styles\templates\nav.tpl" */ ?>
 <?php
-/*%%SmartyHeaderCode:3190956c67e23531ba2_10956924%%*/
+/*%%SmartyHeaderCode:1395056c76fac167a40_44315627%%*/
 if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
@@ -9,20 +9,20 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '67cba8931da08818a4365d301dfc0023c0939fcd' => 
     array (
       0 => 'C:\\xampp\\htdocs\\db\\styles\\templates\\nav.tpl',
-      1 => 1455848993,
+      1 => 1455910785,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '3190956c67e23531ba2_10956924',
+  'nocache_hash' => '1395056c76fac167a40_44315627',
   'has_nocache_code' => false,
   'version' => '3.1.27',
-  'unifunc' => 'content_56c67e235d3925_24362522',
+  'unifunc' => 'content_56c76fac282760_15607320',
 ),false);
 /*/%%SmartyHeaderCode%%*/
-if ($_valid && !is_callable('content_56c67e235d3925_24362522')) {
-function content_56c67e235d3925_24362522 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_56c76fac282760_15607320')) {
+function content_56c76fac282760_15607320 ($_smarty_tpl) {
 
-$_smarty_tpl->properties['nocache_hash'] = '3190956c67e23531ba2_10956924';
+$_smarty_tpl->properties['nocache_hash'] = '1395056c76fac167a40_44315627';
 ?>
 <div class="wrapper">
 
@@ -162,7 +162,7 @@ $_smarty_tpl->properties['nocache_hash'] = '3190956c67e23531ba2_10956924';
           <?php } else { ?>
           <li class="treeview">
           <?php }?>
-          <a href="#">
+          <a href="?p=graficos">
             <i class="fa fa-pie-chart"></i>
             <span>Graficos Estadisticos</span>
             <!--<i class="fa fa-angle-left pull-right"></i>-->

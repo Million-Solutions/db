@@ -15,7 +15,7 @@ class Acceso{
               if($db->rows($sql) > 0){
                 echo 1;
 
-                $nombre_sesion="login";
+                $nombre_sesion="PHPSESSID";
                 $duracion_sesion = 2*7*24*60*60;
                 session_name($nombre_sesion);
 
@@ -37,7 +37,7 @@ class Acceso{
                                   session_cache_expire($duracion_sesion);
                                   session_set_cookie_params($duracion_sesion);}
 
-          session_start();
+
               }else{
             throw new Exception(2);
               }

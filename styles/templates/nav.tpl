@@ -125,7 +125,7 @@
           {else}
           <li class="treeview">
           {/if}
-          <a href="#">
+          <a href="?p=graficos">
             <i class="fa fa-pie-chart"></i>
             <span>Graficos Estadisticos</span>
             <!--<i class="fa fa-angle-left pull-right"></i>-->

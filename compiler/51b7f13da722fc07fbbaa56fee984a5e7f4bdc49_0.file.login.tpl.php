@@ -1,7 +1,7 @@
-<?php /* Smarty version 3.1.27, created on 2016-02-16 21:21:11
+<?php /* Smarty version 3.1.27, created on 2016-02-19 11:13:32
          compiled from "C:\xampp\htdocs\db\styles\templates\login.tpl" */ ?>
 <?php
-/*%%SmartyHeaderCode:752356c3d917871308_95145662%%*/
+/*%%SmartyHeaderCode:2648256c73f2c8fbce2_58703098%%*/
 if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
@@ -9,20 +9,20 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '51b7f13da722fc07fbbaa56fee984a5e7f4bdc49' => 
     array (
       0 => 'C:\\xampp\\htdocs\\db\\styles\\templates\\login.tpl',
-      1 => 1455675667,
+      1 => 1455898411,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '752356c3d917871308_95145662',
+  'nocache_hash' => '2648256c73f2c8fbce2_58703098',
   'has_nocache_code' => false,
   'version' => '3.1.27',
-  'unifunc' => 'content_56c3d9178bdc17_66906250',
+  'unifunc' => 'content_56c73f2c949589_95856244',
 ),false);
 /*/%%SmartyHeaderCode%%*/
-if ($_valid && !is_callable('content_56c3d9178bdc17_66906250')) {
-function content_56c3d9178bdc17_66906250 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_56c73f2c949589_95856244')) {
+function content_56c73f2c949589_95856244 ($_smarty_tpl) {
 
-$_smarty_tpl->properties['nocache_hash'] = '752356c3d917871308_95145662';
+$_smarty_tpl->properties['nocache_hash'] = '2648256c73f2c8fbce2_58703098';
 ?>
 <!DOCTYPE html>
 <html lang="en"><head>
@@ -119,7 +119,7 @@ body {
                 if(parseInt(connect.responseText) == 1){
                   result = '<div class="alert alert-success" role="alert">';
                   result += '<strong>CONECTADO </strong>Bienvenido, pronto estaras dentro.</div>';
-                  location.href = '?p=index';
+                  location.href = 'index.php';
                   document.getElementById('ajax').innerHTML = result;
 
                 }else{
